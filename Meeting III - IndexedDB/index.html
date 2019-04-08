@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>ServiceWorker</title>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+        .column {
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    My webpage uses IndexedDB API. Or does it?
+    <br />
+    <div class="row">
+        <div class="column">
+            <input type="text" id="input-add" />
+            <button id="btn-add">Add</button>
+        </div>
+        <div class="column">
+            <input type="text" id="input-remove" />
+            <button id="btn-remove">Delete</button>
+        </div>
+        <div class="column">
+            <button id="btn-read">Read</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+
+    <script src="./index.js"></script>
+</body>
+</html>
