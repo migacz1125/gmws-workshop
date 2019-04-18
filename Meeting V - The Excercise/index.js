@@ -1,0 +1,6 @@
+(function(){
+
+    const namesData = ["Carlos", "Xenos", "Bert", "Dieter", "Victor", "Steven", "Lucas", "Fletcher", "Rashad", "Edan", "Tate", "Emery", "Jasper", "Brian", "Dominic", "Henry", "Upton", "Bevis", "Tucker", "Brennan", "Derek", "Barrett", "Allen", "Raja", "Francis", "Zane", "Vernon", "Andrew", "Hu", "Davis", "Quamar", "Vance", "Armando", "Chaney", "Grady", "Kenyon", "Derek", "Seth", "Burton", "Neil", "Forrest", "Devin", "Samson", "Conan", "Rudyard", "Dustin", "Amir", "Russell", "Rogan", "Ali", "Linus", "Isaiah", "Xavier", "Xavier", "Benjamin", "Giacomo", "Levi", "Chadwick", "Macaulay", "Daquan", "John", "Armando", "Ferdinand", "Bevis", "Cruz", "Thaddeus", "Yuli", "Marshall", "Gray", "Aaron", "Emerson", "Finn", "Vincent", "Chadwick", "Abbot", "Laith", "Lucas", "Nathan", "Demetrius", "Demetrius", "Merrill", "Barrett", "Warren", "Chester", "Seth", "Stone", "Galvin", "Lars", "Moses", "Cyrus", "Lucius", "Kenneth", "Kermit", "Hashim", "Xenos", "Akeem", "Jason", "Nigel", "Joel", "Damian"]
+    
+    // Write your code here
+})();
