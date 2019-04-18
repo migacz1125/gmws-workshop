@@ -2,14 +2,13 @@
   "name": "serviceworker",
   "version": "1.0.0",
   "description": "`npm install`",
-  "main": "index.js",
   "scripts": {
     "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Marcin Fuja",
+  "author": "Bartosz Gerono",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "0.11.1"
   }
 }
