@@ -23,13 +23,19 @@
     }
 
     this.saveSortedArrayInIndexedDB = (namesArray) => {
+        if (!('indexedDB' in window)) {
+            console.error('This browser doesn\'t support IndexedDB');
+            return;
+        }
+
         let request = indexedDB.open('Main_Database', 1);
         
         request.addEventListener('upgradeneeded', (e) => {
             db = e.target.result;
 
-            if (!db.objectStoreNames.contains('store')) {
-                db.createObjectStore('store');
+            if (!db.objectStoreNames.contains('people')) {
+                const peopleStore = db.createObjectStore('people', {keyPath: 'id', autoIncrement: true});
+                peopleStore.createIndex('name', 'name', {unique: false})
             }
         });
 
@@ -46,18 +52,19 @@
     }
 
     this.addArrayToStore = (value) => {
-        const transaction = db.transaction(['store'], 'readwrite');
-        const objectStore = transaction.objectStore('store', {keyPath: 'name'});
+        const transaction = db.transaction(['people'], 'readwrite');
+        const store = transaction.objectStore('people');
         
-        objectStore.add(value, 'name');
-
+        value.forEach(element => {
+            store.add({name: element});
+        });
+        
         transaction.addEventListener('error', (e) => {
             console.log('Error: ' + e.target.error.name);
         });
 
         transaction.addEventListener('complete', (e) => {
-            console.log('Woot! Did it!');
+            console.log('Sorted array with names are stored in indexedDB !');
         });
     }
-    // Write your code here
 })();
